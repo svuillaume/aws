@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------------------------------------------
+|                                              DescribeInstances                                              |
++------------------------------------------------------+----------------------+-------------------+-----------+
+|                          DNS                         |     InstanceID       |       Name        |   State   |
++------------------------------------------------------+----------------------+-------------------+-----------+
+|  ec2-3-98-53-0.ca-central-1.compute.amazonaws.com    |  i-07e53cd386b3e6040 |  samv-jumpbox     |  running  |
+|                                                      |  i-03fc93fcdd4c78b62 |  samv-k8s-A       |  stopped  |
+|  ec2-35-183-45-2.ca-central-1.compute.amazonaws.com  |  i-0c1a8c1242f2e386d |  samv-fusion-demo |  running  |
+|  ec2-3-99-164-130.ca-central-1.compute.amazonaws.com |  i-0bf8c529e3f139867 |  samv-hapee1      |  running  |
+|                                                      |  i-0de7fbdeda07734de |  samv-hapee2      |  stopped  |
+|                                                      |  i-0d315e04dc79be166 |  samv-hapee3      |  stopped  |
+|                                                      |  i-010d8a5f6dda77252 |  samv-k8s-B       |  stopped  |
+|                                                      |  i-03fc961134d6f2d74 |  samv-kic-ext     |  stopped  |
++------------------------------------------------------+----------------------+-------------------+-----------+

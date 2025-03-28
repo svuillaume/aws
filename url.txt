@@ -1,0 +1,1 @@
+https://samv-sno.s3.amazonaws.com/master.ign?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARZVIDQERWA653HEA%2F20250325%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250325T222034Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=d2bf481281928b5701ea7973e796afb30e57c3f289036130625b9b2f8a87b0bd

@@ -1,0 +1,47 @@
+terraform apply \
+  -auto-approve \
+  -var aws_region='ca-central-1' \
+  -var key_name='sam_aws.key' \
+  -var aws_ami_os='rhel9' \
+  -var stack_name='samv-fusion-rhel-stack' \
+  -var aws_fusion_controlplane_instance_type='c5.4xlarge' \
+  -var fusion_controlplane_cluster_size='3' \
+  -var aws_fusion_dns_zone='' \
+  -replace module.fusion-deploy.aws_instance.fusion_controlplane_node[1]
+
+
+---
+
+terraform apply \
+  -auto-approve \
+  -var aws_region='us-east-2' \
+  -var key_name='my-keypair-name' \
+  -var aws_ami_os='ubuntu22.04' \
+  -var stack_name='my-fusion-stack' \
+  -var aws_fusion_controlplane_instance_type='c5.4xlarge' \
+  -var fusion_controlplane_cluster_size='3' \
+  -var aws_fusion_dns_zone='' \
+  -replace module.fusion-deploy.aws_instance.fusion_controlplane_node[2]
+
+
+
+
+
+
+---
+
+terraform destroy \
+  -auto-approve \
+  -var aws_region='ca-central-1' \
+  -var key_name='sam_aws.key' \
+  -var stack_name='samv-fusion-rhel-stack' \
+  -var aws_fusion_dns_zone=''
+
+---
+
+ansible-playbook \
+  -i inventory/layout_3node_aws_ec2.yml \
+  -u ec2-user \
+  --private-key ~/.ssh/sam_aws.key.pem \
+  --extra-vars "@myvariables.yaml" \
+   plays/playbook.yml

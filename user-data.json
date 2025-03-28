@@ -1,0 +1,8 @@
+{
+  "ignition": {
+    "version": "3.2.0",
+    "config": {
+      "url": "https://samv-sno.s3.amazonaws.com/bootstrap.ign?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARZVIDQERWA653HEA%2F20250325%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250325T225518Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=5c8328d6d76cf030df91aca1a2157d55332e535df57710f223a38ddc3a338979"
+    }
+  }
+}
